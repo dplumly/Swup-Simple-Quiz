@@ -23,31 +23,20 @@ async function ensureDirectoryExists(directory) {
     }
 }
 
-// POST route to write CSV data
 app.post('/write-file', async (req, res) => {
     try {
-        await ensureDirectoryExists(analyticsDir);
-        const filePath = path.join(analyticsDir, 'analytics.csv');
-        const data = req.body; // CSV data from client
-
-        console.log(`Data received from client: ${data}`); // Log the data received
-
-        // Check the type of the incoming data
-        console.log('Type of data:', typeof data);
-
-        // Ensure data is a string
-        if (typeof data !== 'string') {
-            throw new Error('Data must be a string.');
-        }
+        const filePath = path.join(__dirname, 'analytics/analytics.csv');
+        const data = req.body; // This will be the entire session's data in a single line
 
         // Append the data to the CSV file
-        await fs.appendFile(filePath, data);
+        await fs.appendFile(filePath, data + "\n");  // Add a newline after the session data
         res.send('CSV data has been saved!');
     } catch (err) {
         console.error('Error writing to file:', err);
         res.status(500).send('Failed to write CSV file');
     }
 });
+
 
 // Start the server
 app.listen(port, () => {
