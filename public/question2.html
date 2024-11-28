@@ -1,24 +1,51 @@
 <!doctype html>
 <html lang="en">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Question 2</title>
-    <link rel="stylesheet" href="main.css">
-</head>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Quiz Template</title>
+        <link rel="stylesheet" href="css/reset.css">
+        <!-- <link rel="stylesheet" href="css/normalize.css"> -->
+        <link rel="stylesheet" href="css/main.css">
+        <script defer src="js/swup.min.js"></script>
+        <script defer src="js/swupInit.js"></script>
+        <script defer src="js/index.js"></script>
+    </head>
 <body>
+    <div class="container">
+        <!-- Put anything HERE above the id="swap" to have consistent across the app -->
+         
+        <video autoplay muted loop id="background-video">
+            <source src="img/bg-vertical.mp4" type="video/mp4">
+        </video>
 
-    <h2 data-question="2">Question 2: What is the largest planet in the Solar System?</h2>
+        <main id="swup" class="transition-fade">
+            <div id="question2" class="content-container">
 
-    <!-- Multiple choice options using buttons -->
-    <button type="button" id="answer1" class="answer-button">Earth</button>
-    <button type="button" id="answer2" class="answer-button">Mars</button>
-    <button type="button" id="answer3" class="answer-button">Jupiter</button>
-    <button type="button" id="answer4" class="answer-button">Venus</button>
+                <!-- <h1 data-question="2">Question 2: What is the largest planet in the Solar System?</h1>
+                <button type="button" class="answer-button">Jupiter</button>
+                <button type="button" class="answer-button">Mars</button>
+                <button type="button" class="answer-button">Earth</button>
+                <button type="button" id="submit">Submit</button>
+                <a href="question3.html" class="button cta-button transition-fade-slide-right">Next</a>
+            </div> -->
 
-    <!-- Submit button -->
-    <button type="button" id="submit">Submit</button>
 
-    <script src="client.js"></script>    
+            <div id="question2" class="content-container">
+                <h1 class="question-header" data-question="2">What is the largest planet in our solar system?</h1>
+                <ul class="question-container">
+                    <li><button class="button answer-button" type="button">Jupiter</button></li>
+                    <li><button class="button answer-button" type="button">Mars</button></li>
+                    <li><button class="button answer-button" type="button">Earth</button></li>
+                    <li><button class="button answer-button" type="button">Venus</button></li>
+                    <li><button class="button answer-button" type="button">Saturn</button></li>
+                    <li><button class="button-submit" type="button" id="submit">Submit</button></li>
+                </ul>
+                <div class="next-button-container">
+                    <a href="question3.html" class="cta-button">Next</a>
+                </div>
+            </div>
+        </main>
+    </div>
 </body>
 </html>

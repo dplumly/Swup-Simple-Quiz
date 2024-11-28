@@ -1,16 +1,30 @@
 <!doctype html>
 <html lang="en">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>How to Create and Save text file in JavaScript</title>
-    <link rel="stylesheet" href="main.css">
-</head>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Quiz Template</title>
+        <link rel="stylesheet" href="css/reset.css">
+        <!-- <link rel="stylesheet" href="css/normalize.css"> -->
+        <link rel="stylesheet" href="css/main.css">
+        <script defer src="js/swup.min.js"></script>
+        <script defer src="js/swupInit.js"></script>
+        <script defer src="js/index.js"></script>
+    </head>
 <body>
+    <div class="container">
+        <!-- Put anything HERE above the id="swap" to have consistent across the app -->
 
-    <a href="index.html"><button type="button" id="finishSession">Finish</button></a>
+        <video autoplay muted loop id="background-video">
+            <source src="img/bg-vertical.mp4" type="video/mp4">
+        </video>
 
-    <!-- <button type="button" id="finishSession">Finish</button> -->
-    <script src="client.js"></script>	
+       
+        <main id="swup" class="transition-fade">
+            <div class="content-container">
+                <a href="index.html"><button type="button" id="finishSession">Finish</button></a>
+            </div>
+        </main>
+    </div>
 </body>
 </html>
