@@ -1,4 +1,4 @@
-Lightweight library for local analytics. 
+Simple quiz using Swup and saving quiz results to CSV. 
 
 <strong>Target machine installs:</strong>
 <br>
