@@ -5,7 +5,6 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Quiz Template</title>
         <link rel="stylesheet" href="css/reset.css">
-        <!-- <link rel="stylesheet" href="css/normalize.css"> -->
         <link rel="stylesheet" href="css/main.css">
         <script defer src="js/swup.min.js"></script>
         <script defer src="js/swupInit.js"></script>
@@ -16,33 +15,23 @@
         <!-- Put anything HERE above the id="swap" to have consistent across the app -->
          
         <video autoplay muted loop id="background-video">
-            <source src="img/bg-vertical.mp4" type="video/mp4">
+            <source src="img/bg-1080px.mp4" type="video/mp4">
         </video>
 
-
         <main id="swup" class="transition-fade">
-            <!-- <div id="question3" class="content-container">
-                <h1 data-question="3">Question 3: What is the capital of France?</h1>
-                <button type="button" class="answer-button">Jupiter</button>
-                <button type="button" class="answer-button">Mars</button>
-                <button type="button" class="answer-button">Earth</button>
-                <button type="button" id="submit">Submit</button>
-                <a href="finish.html" class="button cta-button transition-fade-slide-right">Next</a>
-            </div> -->
-
-
-
             <div id="question3" class="content-container">
-                <h1 class="question-header" data-question="3">Question 3: What is the capital of France?</h1>
+                <h1 class="question-header" data-question="3">What is the capital of France?</h1>
                 <ul class="question-container">
                     <li><button class="button answer-button" type="button">Paris</button></li>
-                    <li><button class="button answer-button" type="button">Larpo</button></li>
-                    <li><button class="button answer-button" type="button">Jackson</button></li>
-                    <li><button class="button answer-button" type="button">Wei Wei</button></li>
-                    <li><button class="button-submit" type="button" id="submit">Submit</button></li>
+                    <li><button class="button answer-button" type="button">Bourges</button></li>
+                    <li><button class="button answer-button" type="button">Bayonne</button></li>
+                    <li><button class="button answer-button" type="button">Cherbourg</button></li>
                 </ul>
                 <div class="next-button-container">
-                    <a href="finish.html" class="cta-button">Next</a>
+                    <a href="finish.html" id="submit" class="cta-button">Next</a>
+                </div>
+                <div class="back-button-container">
+                    <a href="question2.html" class="cta-button">Back</a>
                 </div>
             </div>
         </main>

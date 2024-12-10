@@ -5,7 +5,6 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Quiz Template</title>
         <link rel="stylesheet" href="css/reset.css">
-        <!-- <link rel="stylesheet" href="css/normalize.css"> -->
         <link rel="stylesheet" href="css/main.css">
         <script defer src="js/swup.min.js"></script>
         <script defer src="js/swupInit.js"></script>
@@ -16,20 +15,19 @@
         <!-- Put anything HERE above the id="swap" to have consistent across the app -->
 
         <video autoplay muted loop id="background-video">
-            <source src="img/bg-vertical.mp4" type="video/mp4">
+            <source src="img/bg-1080px.mp4" type="video/mp4">
         </video>
 
         <main id="swup" class="transition-fade">
             <div id="question1" class="content-container">
-                <h1 class="question-header" data-question="1">What is the largest planet in our solar system?</h1>
+                <h1 class="question-header" data-question="1">What is the name of the AI in Halo?</h1>
                 <ul class="question-container">
-                    <li><button class="button answer-button" type="button">Jupiter</button></li>
-                    <li><button class="button answer-button" type="button">Mars</button></li>
-                    <li><button class="button answer-button" type="button">Earth</button></li>
-                    <li><button class="button-submit" type="button" id="submit">Submit</button></li>
+                    <li><button class="button answer-button" type="button">Serina</button></li>
+                    <li><button class="button answer-button" type="button">Vergil</button></li>
+                    <li><button class="button answer-button" type="button">Cortana</button></li>
                 </ul>
                 <div class="next-button-container">
-                    <a href="question2.html" class="cta-button">Next</a>
+                    <a href="question2.html" id="submit" class="cta-button">Next</a>
                 </div>
             </div>
         </main>

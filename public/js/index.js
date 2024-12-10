@@ -1,4 +1,4 @@
-// Ensure this is in every page's index.js
+// // Ensure this (IIFE) is in every page's index.js
 (function() {
     console.log('Quiz script initialized');
 
@@ -8,12 +8,12 @@
         const submitButton = event.target.closest('#submit');
 
         if (answerButton) {
-            
             document.querySelectorAll('.answer-button').forEach(btn => btn.blur());
             answerButton.focus();
             window.selectedAnswer = answerButton.innerText;
         }
 
+        // Functions to submit the session stored data to csv
         if (submitButton) {
             const questionElement = document.querySelector('h1[data-question]');
             const questionNumber = questionElement 
@@ -23,6 +23,7 @@
             if (window.selectedAnswer && questionNumber) {
                 sessionStorage.setItem(`Question ${questionNumber}`, window.selectedAnswer);
 
+                // Change this value for the correct amount of questions
                 const totalQuestions = 3;
                 
                 if (questionNumber === totalQuestions) {
@@ -48,4 +49,5 @@
         }
     });
 })();
+
 
